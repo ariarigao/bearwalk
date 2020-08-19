@@ -12,6 +12,13 @@ driver ratings, and detour mileage
 - Designed the frontend UI with `React Hooks, JavaScript, Bootstrap` and customized map view with `Google Maps API`
 - Optimized database architecture with `AWS Redshift` and built caching system for searched results with `Google Guava Cache`
 
+## Website Demo
+- Deployed the project on s3. http://rideshare-20200818203058-hostingbucket-rideshare.s3-website.us-east-2.amazonaws.com
+- Please use our provided username and password. The sign-up function does disabled since our EC2 server is not running due to hourly opertional cost. 
+- username: twang50
+- password: @Wtc1234
+
+
 ## Infrastructure Design
 - 3-tier architecture
    * Presentation tier: React, BootStrap
