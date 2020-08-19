@@ -20,7 +20,7 @@ driver ratings, and detour mileage
 
 ## In Rider Mode
 > Rider intputs a Trip Request
-<a href="https://ibb.co/2WL2kyY"><img src="https://i.ibb.co/TYnXgkq/Screen-Shot-2020-08-18-at-11-20-05-PM.png" alt="Screen-Shot-2020-08-18-at-11-20-05-PM" border="0"  width="900" height= "600"></a>
+<a href="https://ibb.co/2WL2kyY"><img src="https://i.ibb.co/TYnXgkq/Screen-Shot-2020-08-18-at-11-20-05-PM.png" alt="Screen-Shot-2020-08-18-at-11-20-05-PM" border="0"  width="700" height= "400"></a>
 
 -the user will see in questionnaire the following input entries:
    * Origin and distance range (circle)
