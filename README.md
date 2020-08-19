@@ -27,5 +27,14 @@ driver ratings, and detour mileage
 > HTTP Endpoint Design
 <a href="https://ibb.co/cwFJzcJ"><img src="https://i.ibb.co/HCz7mD7/Screen-Shot-2020-08-18-at-10-32-27-PM.png" alt="Screen-Shot-2020-08-18-at-10-32-27-PM" border="0" width="1000" height= "600"></a>
 
+## Database Design
+- AWS RedShift 
+   * **Trip** - store trip information, along with driver ID, and a list of rider ID's.
+   * **Rider** - store rider information.
+   * **Driver** - store driver information
+   * **Node** - store a Node in the map, along with its latitude and longitude. 
+   * **Way** - store a Way in the map, along with its starting Node and ending Node.
 > Database Design
+    * ** shaded keys are primary keys**
+    * ** arrows point from a foreign key that uniquely identifies a fieled in another table **
 <a href="https://ibb.co/ZzhY85n"><img src="https://i.ibb.co/WvcPyZb/Screen-Shot-2020-08-18-at-10-36-22-PM.png" alt="Screen-Shot-2020-08-18-at-10-36-22-PM" border="0" border="0" width="1000" height= "600"></a>
