@@ -12,7 +12,7 @@ to match drivers to riders.
 A trip is matched to a rider when the rider's origin and destination fall into the grids that contains that trip.
 - Developed backend functionality to return the ordered search results of rides based on riders’ requirements, e.g. departure time,
 driver ratings, and detour mileage
-- Designed the frontend UI with `React Hooks, JavaScript, Bootstrap` and customized map view with `Google Maps API`
+- Designed the frontend UI with `React Hooks, React Router, JavaScript, Bootstrap` and customized map view with `Google Maps API`
 - Optimized database architecture with `AWS Redshift` and built caching system for searched results with `Google Guava Cache`
 
 ## Website Demo
