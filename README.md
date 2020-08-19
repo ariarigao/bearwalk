@@ -9,7 +9,7 @@ customized ride requirements using `Spring Boot, React and AWS Redshift`
 - Implemented a bi-directional `A* Dijkstra’s algorithm` to find the shortest path between two geocodes
 - Developed backend functionality to return the ordered search results of rides based on riders’ requirements, e.g. departure time,
 driver ratings, and detour mileage
-- Designed the frontend UI with `React Hooks, JavaScript, Bootstrap` and customized map view with `Google Maps API`
+- Designed the frontend UI with `React Hooks, React Router, JavaScript, Bootstrap` and customized map view with `Google Maps API`
 - Configured User Identity management system based on `AWS Cognito`
 - Optimized database architecture with `AWS Redshift` and built caching system for searched results with `Google Guava Cache`
 
@@ -70,7 +70,7 @@ driver ratings, and detour mileage
 
 ## Infrastructure Design
 - 3-tier architecture
-   * Presentation tier: React, BootStrap
+   * Presentation tier: React, React Router, BootStrap
    * Data tier: AWS Redshift
    * Logic tier: Java, Spring
 - Third Party Service
