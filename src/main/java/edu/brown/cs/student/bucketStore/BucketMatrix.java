@@ -3,6 +3,7 @@ package edu.brown.cs.student.bucketStore;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -23,7 +24,7 @@ class BucketMatrix {
 	public static double WEST_BORDER = 124.8;
 	public static double EAST_BORDER = 67.0;
 	private TripBucket[][] storage;
-	private HashMap<String, HashSet<TripBucket>> tripIdToBucket;
+	private HashMap<String, List<TripBucket>> tripIdToBucket;
 	
 	public BucketMatrix() {
 		int numRows = (int) Math.ceil((NORTH_BORDER - SOUTH_BORDER)/REGION_SIDELEN);
@@ -51,6 +52,7 @@ class BucketMatrix {
 	
 	public void putTrip(String tripId, double lat, double lgn) throws CoordinateOutOfBoundException{
 		// error check input
+		// to be called sequentially on list of nodes
 		double[] input = {lat, lgn};
 		if (coordinateOutOfBound(input)) {
 			throw new CoordinateOutOfBoundException("coordinate out of bound");
@@ -59,9 +61,13 @@ class BucketMatrix {
 		TripBucket bucket = this.storage[indices[0]][indices[1]];
 		bucket.insertTrip(tripId);
 		if (this.tripIdToBucket.containsKey(tripId)) {
-			this.tripIdToBucket.get(tripId).add(bucket);
+			List<TripBucket> bucketList = this.tripIdToBucket.get(tripId);
+			if (bucketList.get(bucketList.size()-1) != bucket) {
+				this.tripIdToBucket.get(tripId).add(bucket);
+			}
+			return;
 		}
-		HashSet<TripBucket> newSet = new HashSet<>();
+		List<TripBucket> newSet = new ArrayList<>();
 		newSet.add(bucket);
 		this.tripIdToBucket.put(tripId, newSet);
 	}
@@ -80,7 +86,7 @@ class BucketMatrix {
  	}
 	
 	public void removeTrip(String tripId) {
-		HashSet<TripBucket> bucketsContainTrip = this.tripIdToBucket.get(tripId);
+		List<TripBucket> bucketsContainTrip = this.tripIdToBucket.get(tripId);
 		Iterator<TripBucket> iter = bucketsContainTrip.iterator();
 		while (iter.hasNext()) {
 			TripBucket bucket = iter.next();

@@ -27,7 +27,9 @@ class TripBucket {
 	}
 	
 	public void removeTrip(String tripToRemove) {
-		trips.remove(tripToRemove);
+		if (trips.contains(tripToRemove)) {
+			trips.remove(tripToRemove);
+		}
 	}
 	
 	public void insertTrip(String newTrip) {
