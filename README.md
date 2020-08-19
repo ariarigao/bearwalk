@@ -1,108 +1,107 @@
-# cs0320 Term Project 2020
+# RideShare
 
-**Team Members:**
-Mustafa Ghani, Tony Wang , Izzy Gao, Harman Suri: 
+## Business Design
+- To design a long-distance ride sharing web application to help users set up, search and manage a ride with customized ride requirements.
 
-**Team Strengths and Weaknesses:**
+## General Instruction
+- Designed and created a long-distance ride sharing web application to help users set up, search and manage a ride with
+customized ride requirements using `Spring Boot, React and AWS Redshift`
+- Implemented a bi-directional `A* Dijkstra’s algorithm` to find the shortest path between two geocodes
+- Developed backend functionality to return the ordered search results of rides based on riders’ requirements, e.g. departure time,
+driver ratings, and detour mileage
+- Designed the frontend UI with `React Hooks, React Router, JavaScript, Bootstrap` and customized map view with `Google Maps API`
+- Configured User Identity management system based on `AWS Cognito`
+- Optimized database architecture with `AWS Redshift`
 
-Mustafa Ghani: 
-Strengths: algorithms, critical thinking
-Weaknesses: bad at reading documentations 
- 
-Tony Wang : 
-Strength: Server
-Weakness: time management, and communication 
- 
-Izzy Gao :
-Strength: types very fast, good at frontend
-Weakness: bad at backend 
- 
-Harman Suri: 
-Strength: algorithms
-Weaknesses: bad at visual design
+## Website Demo
+- Deployed the project on s3. http://rideshare-20200818203058-hostingbucket-rideshare.s3-website.us-east-2.amazonaws.com
+- Please use our provided username and password. The sign-up function is disabled since our EC2 server is not running due to hourly opertional cost.
+- username: twang58
+- password: @Wtc1234
 
-**Project Idea(s):** _Fill this in with three unique ideas! (Due by March 2)_
-### Idea 1
-_Unsure (but likely) - Clear algorithm but it'll be really hard to anticipate likely usage (and vetting users is essentially impossible at a small scale)_
--   Going to NY for the weekend? Greyhounds are slow and unreliable. Train is too expensive. Why not have an app where people driving to and from cities may offer a rideshare at a cheap cost. Boston to New York, Los Angeles to San Francisco, Toronto to Chicago and more...
--   Rideshare application for long-distance travel
+## In Rider Mode
+> Rider inputs a Trip Request
+![riderpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/riderpost.png)
 
-**Problem - high cost of long-distance travel**
--  Solution - price-matching algorithm to ensure either driver and passenger are not shortchanged
-
-**Problem - user safety**
--  Possible Solution - background checks through social media, submission of driver’s license, rating system
-
-**Problem - no-shows/cancellations**
--  Possible Solution - dynamically reallocate passengers to available drivers on similar routes 
-
-**Project Features:**
--  User-safety features - apart from the money-saving incentive, safety appears to be the biggest disincentive for users as rating systems would only work if the driver is a regular participant. However, since drivers are likely to be one-time participants, we would need to ensure that they are vetted 
--  Ensuring reliability of service - provisions for ride substitution/reallocation will allow a smoother more dependable journey and improve return customers 
--  Algorithm to match passengers and drivers - plays a significant role in optimizing a passenger’s journey at the lowest cost and maximizing profit for the driver while maintaining a standard of efficient journey time. 
--  In-app payment - ensures transaction completion and refunds 
-
-**Challenges:**
--  Developing a complex and functional algorithm to connect a driver and a hitchhiker based on the optimal route i.e matching passengers within a certain radius of the driver’s travel route. 
--  develop a visually appealing and intuitive GUI
--  find real users to do user testings
-
-**User Perspective:**
--  We interviewed a hitchhiker, Aidan, who hitchhiked 13,000 + miles 
--  He thinks a good hitchhiking app should give the user the chance to compare prices offered by different drivers, because he is used to hitchhike for free
--  He also thinks safety is a big issue. He would like to see the driver’s social media or other credentials before going on the ride
--  Other participants were generally excited about the idea. When asked if they would use the product they said yes, but were also concerned about the safety aspect. 
+-the user will see in questionnaire the following input entries:
+   * Origin and distance range (circle)
+   * Destination and distance range (circle)
+   * Date time
+   * Max cost
+   * Seats needed
+-Alternative to typing, users can interact with the map (drop a location marker) to input the origin/destination.
+- After the user submits the form, the program searches through the driver trip database to match with drivers. The result of the search will be displayed on the next page:
+> Trip Result Page
 
 
-### Idea 2
-_Rejected - This is a "Create, Read, Update, Delete" app with an extra image classification API call_
--Problem: The current Facebook buying/selling app is not user-friendly. 
- 
-**Description:**
--  A lifestyle app to provide all-encompassing solutions for the typical needs of a Brown Student. 
- 
- 
-**Project Features:**
--Buy/Sell: Brown students shop a lot on amazon and it produces a lot of waste when items no longer needed by someone are simply thrown away. For people who want something, it is cheaper to buy from peers, and people who sell things can also get some money back. Ideally, we won’t have to scrape data from Facebook’s Marketplace. Users can post the items that they want to sell, and the items will be categorized into school supplies, home supplies, women’s clothes, men's clothes, electronics, and apartments. You can also sell Spotify Premium services, Summer storage, plants,etc ...
- 
-         o   Every summer, off-campus students are desperate to find sublets. An app that specializes makes transactions more transparent. For the apartment section, users are able to post about sublets.
-        
-**Challenges:**
--Categorizing might  become a challenge. But we can use Google’s Computer vision API to automatically detect the picture being uploaded, so that the objects can be automatically grouped into a specific category.
- 
-**User Perspective: **
-- We interviewed a fellow Brown Student, Rebecca
-- She thinks that the current Brown Buying and Selling page on Facebook is not a good app because it does not provide automatic image recognition and item categorization. 
--She also thinks the verifying the seller/buyer is actually a Brown student is also critical. 
-Another user concern is the current Facebook page is not very efficient in marking something as Sold as soon as an item is purchased. So users end up contacting sellers that have already sold the items. Since our map has its own channel for payment, this should not be a difficult thing to implement. 
+![tripresult](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripresult.png)
+
+- On this page, users will see all matching results displayed on the left side-bar. For each driver, the following factors are displayed:
+  * Rating
+  * Origin
+  * Destination
+  * Time
+  * Price
+- Users can filter and sort the results by each of these categories and also distance to pickup location or distance to drop off location.
+- When the user clicks on a driver, the map will display the driver’s full trip.
+
+## In Driver Mode
+> Driver supplies a trip
+![driverpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/driverpost.png)
+-the user will see in questionnaire the following input entries:
+  Trip name
+   * Origin
+   * Destination
+   * Date time
+   * Price
+   * Seats available
+-Drivers can interact with the map (drop a location marker) to input the locations.
+
+- After the driver submits the form, the program searches through the rider request database to match with riders. The driver receives a notification that the trip has been created. Then the program routes to the page for the newly-created trip in the driver's trip manager. The page contains driver info and all riders that have been matched.
+
+## Trip Manager
+> Trip Manager for Rider and Driver
+![tripmanager](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripmanager.png)
+
+-In riders’ trip manager page, riders can view all trips including those matched with a driver and those ride requests that are still pending. For trips matched with a driver the rider can click on “leave” to leave the trip. The driver will then receive a notification saying that the rider has left your trip. If the driver’s trip was at capacity, it will now be re-added to the trip database.
+
+- In driver's trip manager page, drivers can view rider details such as origin, destination, rating and contact information. They may then contact the rider on their own accord to handle logistics. However, the driver may choose to remove riders. If a rider is removed, the rider gets a notification that they are removed and is added to the rider request database. If there are seats available for the trip, the driver will then be re-added to the driver trip database for riders to match.
 
 
-### Idea 3
-_Approved!_
--SA web application to store users chess games for peer analysis. 
--SI love playing chess, but most of the time I am playing it by myself without anyone to learn or improve with. I think lots of people could get better much faster if they had access to resources that were tailored to a level slightly above theirs. This application would allow verified users to submit their chess games in PGN format for other verified users to analyze and comment on, provided they are at an ELO slightly above the person submitting their game. 
+## Infrastructure Design
+- 3-tier architecture
+   * Presentation tier: React, React Router, BootStrap
+   * Data tier: AWS Redshift
+   * Logic tier: Java, Spring
+- Third Party Service
+   * Google Maps API
+   * AWS Cognito
+   
+## Local Development Environment
+![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/design.png)
 
+## Infrastructure Design
+![endpoint](https://raw.githubusercontent.com/izziegeez/RideShare/master/endpoint.png)
 
-**Features/Requirements:**
--  Verification of Chess ELO (through searching through existing database of active chess players in North America). This is important to make sure that users are matched with other users with a rating slightly above theirs. Some challenges of this may be efficiently getting the rating of a person from the rating database, and deciding what documents that users have to submit in order to get verified. From a user perspective, it would be quite important that people that are analyzing your games are actually of a given rating, so you can take confidence in the analysis that you are getting. 
--   Database to store the PGN of all the games that users submit, along with the analysis for each of those games. This is necessary to efficiently store and retrieve user games and their analyzed version. It’s possible that this database could get quite large, and then managing it would definitely be challenging. From a user perspective, would allow each user to look at the analysis of their games and get the valuable feedback of how they are playing. 
--    Matching algorithm to suggest potential users for a given user to analyze. This is the key part of the project that links users together so that one can get their games analyzed. Because there may be many users at a given rating and a sparse number of users at some other ratings, setting a matching threshold dynamically (based on how many users are online (or many registered) at a given time) would be challenging. From a user perspective, this is likely the most important feature, as chess players who do not have a coach or do not play in a chess club are often isolated to play only online where it's difficult to improve without quality feedback about your games. 
--    GUI to perform analysis with arrows, highlighting of squares on a chess board, and arrow drawing. This is important because users need to be able to conduct analysis in a visual way (this is often how analysis is done in chess). Creating an easy-to-follow GUI (something like lichess.org’s GUI) is definitely a challenging task. From a user perspective, this will affect how users like the project because it is the majority of their experience in the system. 
--    Users should be able to message each other in a chat box during the game. This allows real-time interaction between people and players can discuss strategy and techniques during and after games to improve. Some third party communication api might be incorporated for this functionality. The challenge is to enable peer-to-peer real-time communication using web socket.
-Possible Features:
--   An AI that is trained to be at ELO X, where X is slightly above the ELO of a given user. This allows a user to train against someone slightly better than them, and then have those training games analyzed to find recurring problems in their game. The challenge of this feature is to incorporate many existing chess engines into the application. From a user perspective, having your training games done in the application, where they are automatically available for analysis provides easy-of-access in uploading games, as well as valuable training against a viable adversary.  
+## Algorithm Design
 
+- We divide the map into regions of side length 0.25 degrees (16 miles). For each region, we make a `bucket object` that contains all trips that pass through the region.
+ * **Populating buckets**: When the driver enters a new trip, the backend runs `bidirectional A-star algorithm` (explained below) from the origin to the destination of the trip. We then iterate through the shortest path, a list of nodes on the map, and enter the trip into the buckets that correspond to the regions where the nodes fall.
+ * **Bucket-based Matching**: Rider enters the origin and destination. The `matching algorithm` computes the buckets where the origin and destination belong to respectively. Then it takes the `intersection` of trips in those buckets. For each trip in both buckets, the algorithm then checks whether the rider origin bucket precedes the rider destination bucket in the list of buckets for the trip. If true, then the algorithm matches the trip to the rider request. The frontend displays all matched trips for rider to choose.
+ * **Join trip**: After the rider chooses to join a trip, the algorithm first removes all references of the trip from buckets. It then computes the shortest path that goes through the rider origin and destination and populates the buckets that the new path passes through with the trip.
+ * **bidirectional A-star**: `A-star algorithm` adapts from the `Dijkstra algorithm` for the shortest path. The difference is that A-star orders the priority based on the distance traveled so far plus the euclidean distance to the destination. The additional heuristic ensures the algorithm terminates faster. Bidirectional A-star runs A-star from both origin and destination (on the reverse graph) in an alternating fashion. The shortest path is found at the point where the space explored by both directions first meets.
+ * **Runtime Consideration**: The algorithm is optimized for fast rider matching. Processing a driver trip requires running the bidirectional A-star algorithm and populating the buckets. In comparison, matching only takes the runtime of a bucket intersection and looping through the trips in the intersection to make sure the origin and destination are in the correct order.
 
-**Mentor TA:** _Put your mentor TA's name and email here once you're assigned one!_
+## Database Design
+- AWS Redshift
+   * **Trip** - store trip information, along with driver ID, and a list of rider ID's.
+   * **Rider** - store rider information.
+   * **Driver** - store driver information
+   * **Node** - store a Node in the map, along with its latitude and longitude.
+   * **Way** - store a Way in the map, along with its starting Node and ending Node.
+- shaded keys are primary keys
+- arrows point from a foreign key that uniquely identifies a fieled in another table **
 
-## Meetings
-_On your first meeting with your mentor TA, you should plan dates for at least the following meetings:_
-
-**Specs, Mockup, and Design Meeting:** _(Schedule for on or before March 13)_
-
-**4-Way Checkpoint:** _(Schedule for on or before April 23)_
-
-**Adversary Checkpoint:** _(Schedule for on or before April 29 once you are assigned an adversary TA)_
-
-## How to Build and Run
-_A necessary part of any README!_
+> Database Design
+   
+![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/database.png)
