@@ -18,5 +18,5 @@ driver ratings, and detour mileage
    * Data tier: AWS Redshift
    * Logic tier: Java, Spring
    
-[![dOsOYJ.md.png](https://iili.io/dOsOYJ.md.png)](https://freeimage.host/i/dOsOYJ)
+<a href="https://freeimage.host/i/dOsOYJ"><img src="https://iili.io/dOsOYJ.md.png" alt="dOsOYJ.md.png" border="0"></a>
 
