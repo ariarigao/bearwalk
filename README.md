@@ -17,6 +17,9 @@ driver ratings, and detour mileage
    * Presentation tier: React, BootStrap
    * Data tier: AWS Redshift
    * Logic tier: Java, Spring
+   
+## Infrastructure Design
+ 
 
 > Local Development Environment
 <a href="https://ibb.co/2PVWxgs"><img src="https://i.ibb.co/jG0bmgW/Screen-Shot-2020-08-18-at-10-26-37-PM.png" alt="Screen-Shot-2020-08-18-at-10-26-37-PM" border="0" width="1000" height= "600"></a>
@@ -25,4 +28,4 @@ driver ratings, and detour mileage
 <a href="https://ibb.co/cwFJzcJ"><img src="https://i.ibb.co/HCz7mD7/Screen-Shot-2020-08-18-at-10-32-27-PM.png" alt="Screen-Shot-2020-08-18-at-10-32-27-PM" border="0" width="1000" height= "600"></a>
 
 > Database Design
-<a href="https://ibb.co/ZzhY85n"><img src="https://i.ibb.co/WvcPyZb/Screen-Shot-2020-08-18-at-10-36-22-PM.png" alt="Screen-Shot-2020-08-18-at-10-36-22-PM" border="0"></a>
+<a href="https://ibb.co/ZzhY85n"><img src="https://i.ibb.co/WvcPyZb/Screen-Shot-2020-08-18-at-10-36-22-PM.png" alt="Screen-Shot-2020-08-18-at-10-36-22-PM" border="0" border="0" width="1000" height= "600"></a>
