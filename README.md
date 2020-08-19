@@ -1,7 +1,7 @@
 # RideShare
 
 ## Business Design
-- To design a personalization based event recommendation systems for event search.
+- To design a long-distance ride sharing web application to help users set up, search and manage a ride with customized ride requirements.
 
 ## General Instruction
 - Designed and created a long-distance ride sharing web application to help users set up, search and manage a ride with
@@ -14,9 +14,38 @@ driver ratings, and detour mileage
 
 ## Website Demo
 - Deployed the project on s3. http://rideshare-20200818203058-hostingbucket-rideshare.s3-website.us-east-2.amazonaws.com
-- Please use our provided username and password. The sign-up function does disabled since our EC2 server is not running due to hourly opertional cost. 
-- username: twang50
+- Please use our provided username and password. The sign-up function is disabled since our EC2 server is not running due to hourly opertional cost. 
+- username: twang58
 - password: @Wtc1234
+
+## In Rider Mode
+> Rider intputs a Trip Request
+<a href="https://ibb.co/2WL2kyY"><img src="https://i.ibb.co/TYnXgkq/Screen-Shot-2020-08-18-at-11-20-05-PM.png" alt="Screen-Shot-2020-08-18-at-11-20-05-PM" border="0"  width="900" height= "600"></a>
+-the user will see in questionnaire the following input entries:
+   * Origin and distance range (circle)
+   * Destination and distance range (circle)
+   * Date time
+   * Max cost
+   * Seats needed
+-Alternative to typing, users can interact with the map (drop a location marker) to input the origin/destination.
+- After the user submits the form, the program searches through the driver trip database to match with drivers. The result of the search will be displayed on the next page:
+> Trip Result Page
+<a href="https://ibb.co/dJfSKYm"><img src="https://i.ibb.co/2YFwK4Z/Screen-Shot-2020-08-18-at-11-23-31-PM.png" alt="Screen-Shot-2020-08-18-at-11-23-31-PM" border="0"  width="900" height= "600"></a>
+- On this page, users will see all matching results displayed on the left side-bar. For each driver, the following factors are displayed:
+  * Rating
+  * Origin
+  * Destination
+  * Time
+  * Price
+- Users can filter and sort the results by each of these categories and also distance to pickup location or distance to drop off location.
+- When the user clicks on a driver, the map will display the driver’s full trip. 
+
+
+
+
+
+
+
 
 
 ## Infrastructure Design
@@ -26,10 +55,10 @@ driver ratings, and detour mileage
    * Logic tier: Java, Spring
    
 ## Local Development Environment
-<a href="https://ibb.co/2PVWxgs"><img src="https://i.ibb.co/jG0bmgW/Screen-Shot-2020-08-18-at-10-26-37-PM.png" alt="Screen-Shot-2020-08-18-at-10-26-37-PM" border="0" width="1000" height= "600"></a>
+<a href="https://ibb.co/2PVWxgs"><img src="https://i.ibb.co/jG0bmgW/Screen-Shot-2020-08-18-at-10-26-37-PM.png" alt="Screen-Shot-2020-08-18-at-10-26-37-PM" border="0" width="900" height= "600"></a>
 
 ## Infrastructure Design
-<a href="https://ibb.co/cwFJzcJ"><img src="https://i.ibb.co/HCz7mD7/Screen-Shot-2020-08-18-at-10-32-27-PM.png" alt="Screen-Shot-2020-08-18-at-10-32-27-PM" border="0" width="1000" height= "600"></a>
+<a href="https://ibb.co/cwFJzcJ"><img src="https://i.ibb.co/HCz7mD7/Screen-Shot-2020-08-18-at-10-32-27-PM.png" alt="Screen-Shot-2020-08-18-at-10-32-27-PM" border="0" width="900" height= "600"></a>
 
 ## Database Design
 - AWS Redshift 
@@ -43,4 +72,4 @@ driver ratings, and detour mileage
 
 > Database Design
     
-<a href="https://ibb.co/ZzhY85n"><img src="https://i.ibb.co/WvcPyZb/Screen-Shot-2020-08-18-at-10-36-22-PM.png" alt="Screen-Shot-2020-08-18-at-10-36-22-PM" border="0" border="0" width="1000" height= "600"></a>
+<a href="https://ibb.co/ZzhY85n"><img src="https://i.ibb.co/WvcPyZb/Screen-Shot-2020-08-18-at-10-36-22-PM.png" alt="Screen-Shot-2020-08-18-at-10-36-22-PM" border="0" border="0" width="900" height= "600"></a>
