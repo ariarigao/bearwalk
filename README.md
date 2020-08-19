@@ -17,4 +17,6 @@ driver ratings, and detour mileage
    * Presentation tier: React, BootStrap
    * Data tier: AWS Redshift
    * Logic tier: Java, Spring
-https://imgur.com/a/I1k8oA1
+   
+![Divvyup Website Workflow](https://imgur.com/a/I1k8oA1.png)
+
