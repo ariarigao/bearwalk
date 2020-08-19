@@ -19,8 +19,8 @@ driver ratings, and detour mileage
 - password: @Wtc1234
 
 ## In Rider Mode
-> Rider intputs a Trip Request
-<a href="https://ibb.co/2WL2kyY"><img src="https://i.ibb.co/TYnXgkq/Screen-Shot-2020-08-18-at-11-20-05-PM.png" alt="Screen-Shot-2020-08-18-at-11-20-05-PM" border="0"  width="700" height= "400"></a>
+> Rider inputs a Trip Request
+![riderpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/riderpost.png)
 
 -the user will see in questionnaire the following input entries:
    * Origin and distance range (circle)
@@ -33,7 +33,7 @@ driver ratings, and detour mileage
 > Trip Result Page
 
 
-![mysql](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripresult.png)
+![tripresult](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripresult.png)
 
 <a href="https://ibb.co/dJfSKYm"><img src="https://i.ibb.co/2YFwK4Z/Screen-Shot-2020-08-18-at-11-23-31-PM.png" alt="Screen-Shot-2020-08-18-at-11-23-31-PM" border="0"  width="900" height= "600"></a>
 - On this page, users will see all matching results displayed on the left side-bar. For each driver, the following factors are displayed:
@@ -48,11 +48,6 @@ driver ratings, and detour mileage
 
 
 
-
-
-
-
-
 ## Infrastructure Design
 - 3-tier architecture
    * Presentation tier: React, BootStrap
@@ -60,10 +55,10 @@ driver ratings, and detour mileage
    * Logic tier: Java, Spring
    
 ## Local Development Environment
-<a href="https://ibb.co/2PVWxgs"><img src="https://i.ibb.co/jG0bmgW/Screen-Shot-2020-08-18-at-10-26-37-PM.png" alt="Screen-Shot-2020-08-18-at-10-26-37-PM" border="0" width="900" height= "600"></a>
+![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/design.png)
 
 ## Infrastructure Design
-<a href="https://ibb.co/cwFJzcJ"><img src="https://i.ibb.co/HCz7mD7/Screen-Shot-2020-08-18-at-10-32-27-PM.png" alt="Screen-Shot-2020-08-18-at-10-32-27-PM" border="0" width="900" height= "600"></a>
+![endpoint](https://raw.githubusercontent.com/izziegeez/RideShare/master/endpoint.png)
 
 ## Database Design
 - AWS Redshift 
@@ -77,4 +72,4 @@ driver ratings, and detour mileage
 
 > Database Design
     
-<a href="https://ibb.co/ZzhY85n"><img src="https://i.ibb.co/WvcPyZb/Screen-Shot-2020-08-18-at-10-36-22-PM.png" alt="Screen-Shot-2020-08-18-at-10-36-22-PM" border="0" border="0" width="900" height= "600"></a>
+![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/database.png)
