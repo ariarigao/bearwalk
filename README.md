@@ -19,4 +19,3 @@ driver ratings, and detour mileage
    * Logic tier: Java, Spring
    
 <a href="https://freeimage.host/i/dOsOYJ"><img src="https://iili.io/dOsOYJ.md.png" alt="dOsOYJ.md.png" border="0"></a>
-
