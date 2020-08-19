@@ -80,13 +80,13 @@ driver ratings, and detour mileage
 ![endpoint](https://raw.githubusercontent.com/izziegeez/RideShare/master/endpoint.png)
 
 ## Algorithm Design
-
+.。。。。。。。。。。。。。l
 - We divide the map into regions of side length 0.25 degrees (16 miles). For each region, we make a `bucket object` that contains all trips that pass through the region.
- **Populating buckets**: When the driver enters a new trip, the backend runs `bidirectional A-star algorithm` (explained below) from the origin to the destination of the trip. We then iterate through the shortest path, a list of nodes on the map, and enter the trip into the buckets that correspond to the regions where the nodes fall.
-  **Bucket-based Matching**: Rider enters the origin and destination. The `matching algorithm` computes the buckets where the origin and destination belong to respectively. Then it takes the `intersection` of trips in those buckets. For each trip in both buckets, the algorithm then checks whether the rider origin bucket precedes the rider destination bucket in the list of buckets for the trip. If true, then the algorithm matches the trip to the rider request. The frontend displays all matched trips for rider to choose. 
- **Join trip**: After the rider chooses to join a trip, the algorithm first removes all references of the trip from buckets. It then computes the shortest path that goes through the rider origin and destination and populates the buckets that the new path passes through with the trip.
+ * **Populating buckets**: When the driver enters a new trip, the backend runs `bidirectional A-star algorithm` (explained below) from the origin to the destination of the trip. We then iterate through the shortest path, a list of nodes on the map, and enter the trip into the buckets that correspond to the regions where the nodes fall.
+ * **Bucket-based Matching**: Rider enters the origin and destination. The `matching algorithm` computes the buckets where the origin and destination belong to respectively. Then it takes the `intersection` of trips in those buckets. For each trip in both buckets, the algorithm then checks whether the rider origin bucket precedes the rider destination bucket in the list of buckets for the trip. If true, then the algorithm matches the trip to the rider request. The frontend displays all matched trips for rider to choose. 
+ * **Join trip**: After the rider chooses to join a trip, the algorithm first removes all references of the trip from buckets. It then computes the shortest path that goes through the rider origin and destination and populates the buckets that the new path passes through with the trip.
   The algorithm is optimized for fast rider matching. Processing a driver trip requires running the bidirectional A-star algorithm and populating the buckets. In comparison, matching only takes the runtime of a bucket intersection and looping through the trips in the intersection to make sure the origin and destination are in the correct order.
- **bidirectional A-star**:
+ * **bidirectional A-star**:
 `A-star algorithm` adapts from the `Dijkstra algorithm` for the shortest path. The difference is that A-star orders the priority based on the distance traveled so far plus the euclidean distance to the destination. The additional heuristic ensures the algorithm terminates faster. Bidirectional A-star runs A-star from both origin and destination (on the reverse graph) in an alternating fashion. The shortest path is found at the point where the space explored by both directions first meets.
 
 ## Database Design
