@@ -11,7 +11,7 @@ customized ride requirements using `Spring Boot, React and AWS Redshift`
 driver ratings, and detour mileage
 - Designed the frontend UI with `React Hooks, React Router, JavaScript, Bootstrap` and customized map view with `Google Maps API`
 - Configured User Identity management system based on `AWS Cognito`
-- Optimized database architecture with `AWS Redshift` and built caching system for searched results with `Google Guava Cache`
+- Optimized database architecture with `AWS Redshift`
 
 ## Website Demo
 - Deployed the project on s3. http://rideshare-20200818203058-hostingbucket-rideshare.s3-website.us-east-2.amazonaws.com
