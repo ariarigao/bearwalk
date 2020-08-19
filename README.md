@@ -35,7 +35,6 @@ driver ratings, and detour mileage
 
 ![tripresult](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripresult.png)
 
-<a href="https://ibb.co/dJfSKYm"><img src="https://i.ibb.co/2YFwK4Z/Screen-Shot-2020-08-18-at-11-23-31-PM.png" alt="Screen-Shot-2020-08-18-at-11-23-31-PM" border="0"  width="900" height= "600"></a>
 - On this page, users will see all matching results displayed on the left side-bar. For each driver, the following factors are displayed:
   * Rating
   * Origin
@@ -45,7 +44,27 @@ driver ratings, and detour mileage
 - Users can filter and sort the results by each of these categories and also distance to pickup location or distance to drop off location.
 - When the user clicks on a driver, the map will display the driver’s full trip. 
 
+## In Driver Mode
+> Driver supplies a trip 
+![driverpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/driverpost.png)
+-the user will see in questionnaire the following input entries:
+  Trip name
+   * Origin
+   * Destination
+   * Date time
+   * Price
+   * Seats available
+-Drivers can interact with the map (drop a location marker) to input the locations.
 
+- After the driver submits the form, the program searches through the rider request database to match with riders. The driver receives a notification that the trip has been created. Then the program routes to the page for the newly-created trip in the driver's trip manager. The page contains driver info and all riders that have been matched. 
+
+## Trip Manager
+> Trip Manager for Rider and Driver
+![tripmanager](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripmanager.png)
+
+-In riders’ trip manager page, riders can view all trips including those matched with a driver and those ride requests that are still pending. For trips matched with a driver the rider can click on “leave” to leave the trip. The driver will then receive a notification saying that the rider has left your trip. If the driver’s trip was at capacity, it will now be re-added to the trip database.
+
+- In driver's trip manager page, drivers can view rider details such as origin, destination, rating and contact information. They may then contact the rider on their own accord to handle logistics. However, the driver may choose to remove riders. If a rider is removed, the rider gets a notification that they are removed and is added to the rider request database. If there are seats available for the trip, the driver will then be re-added to the driver trip database for riders to match.
 
 
 ## Infrastructure Design
