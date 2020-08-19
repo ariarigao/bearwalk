@@ -17,5 +17,9 @@ driver ratings, and detour mileage
    * Presentation tier: React, BootStrap
    * Data tier: AWS Redshift
    * Logic tier: Java, Spring
-   
+  
+> Local Development Environment
 <a href="https://freeimage.host/i/dOsOYJ"><img src="https://iili.io/dOsOYJ.md.png" alt="dOsOYJ.md.png" border="0" width="1000" height= "600"></a>
+
+> HTTP Endpoint Design
+<a href="https://freeimage.host/i/dOZyGI"><img src="https://iili.io/dOZyGI.md.png" alt="dOZyGI.md.png" border="0" width="1000" height= "600"></a>
