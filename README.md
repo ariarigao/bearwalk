@@ -82,7 +82,7 @@ driver ratings, and detour mileage
 ## Local Development Environment
 ![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/design.png)
 
-## Infrastructure Design
+## Endpoint Design
 ![endpoint](https://raw.githubusercontent.com/izziegeez/RideShare/master/endpoint.png)
 
 ## Database Design
