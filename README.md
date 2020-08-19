@@ -31,6 +31,10 @@ driver ratings, and detour mileage
 -Alternative to typing, users can interact with the map (drop a location marker) to input the origin/destination.
 - After the user submits the form, the program searches through the driver trip database to match with drivers. The result of the search will be displayed on the next page:
 > Trip Result Page
+
+
+![mysql](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripresult.png)
+
 <a href="https://ibb.co/dJfSKYm"><img src="https://i.ibb.co/2YFwK4Z/Screen-Shot-2020-08-18-at-11-23-31-PM.png" alt="Screen-Shot-2020-08-18-at-11-23-31-PM" border="0"  width="900" height= "600"></a>
 - On this page, users will see all matching results displayed on the left side-bar. For each driver, the following factors are displayed:
   * Rating
