@@ -75,6 +75,9 @@ driver ratings, and detour mileage
    * Presentation tier: React, BootStrap
    * Data tier: AWS Redshift
    * Logic tier: Java, Spring
+- Third Party Service
+   * Google Maps API
+   * AWS Cognito
    
 ## Local Development Environment
 ![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/design.png)
