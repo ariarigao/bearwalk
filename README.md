@@ -51,7 +51,7 @@ driver ratings, and detour mileage
 > Driver supplies a trip 
 ![driverpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/driverpost.png)
 -the user will see in questionnaire the following input entries:
-  Trip name
+   * Trip name
    * Origin
    * Destination
    * Date time
