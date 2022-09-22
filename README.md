@@ -10,7 +10,7 @@ students that requested the service and to the destinations they requested.
 students that requested the service and to the destinations they requested, using `Java, React, and MongoDB`.
 - Implemented a bi-directional `A* Dijkstra’s algorithm` to find the shortest path between two geocodes and a grid-based matching process
 to match students to night walkers. 
-- Developed backend functionality to match safety walkers to students by dviding the map into grids, where we store trips that pass through them. 
+- Developed backend functionality to match safety walkers to students by dividing the map into grids, where we store trips that pass through them. 
 A trip is matched to a student when the student's origin and destination fall into the grids that contains that trip.
 - Enabled interactive map visualization of the Berkeley campus with Google Maps API, and built frontend features with React.
 
@@ -53,7 +53,7 @@ s. The result of the search will be displayed on the next page:
 
 -In students’ trip manager page, riders can view all trips including those matched with a safety walker and those trip requests that are still pending. For trips matched with a safety walker the student can click on “leave” to leave the trip. The safety walker will then receive a notification saying that the student has left your trip. If the safety walker’s trip was at capacity, it will now be re-added to the trip database.
 
-- In safety walker's trip manager page, safety walkers can view rider details such as origin, destination, rating and contact information. They may then contact the student on their own accord to handle logistics. However, the safety walker may choose to remove students. If a students is removed, the student gets a notification that they are removed and is added to the student request database. If there are seats available for the trip, the safety walker will then be re-added to the safety walker trip database for students to match.
+- In safety walker's trip manager page, safety walkers can view rider details such as origin, destination, rating and contact information. They may then contact the student on their own accord to handle logistics. However, the safety walker may choose to remove students. If a studentis removed, the student gets a notification that they are removed and is added to the student request database. If there are seats available for the trip, the safety walker will then be re-added to the safety walker trip database for students to match.
 
 ## Algorithm Design
 
@@ -81,7 +81,7 @@ s. The result of the search will be displayed on the next page:
 
 
 ## Database Design
-- AWS Redshift 
+- MongoDB
    * **Trip** - store trip information, along with night walker ID, and a list of student ID's.
    * **Student** - store student information.
    * **NightWalker** - store night walker information
