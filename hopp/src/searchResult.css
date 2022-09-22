@@ -1,0 +1,54 @@
+.mb-2{
+    margin-left:50px;
+}
+
+.small{
+    margin-left:50px;
+   font-size:90%; 
+}
+
+.container{
+    margin-right:40%;
+    margin-left: 100px;
+    width:100px;
+    padding:none;
+   
+    /* background: none; */
+}
+.p-3{
+    /* background-color: #480048; */
+    height:170px;
+}
+
+.select-button{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #2699FB ;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#2699FB;
+    text-align:center;
+    transition: all 0.2s;
+    border-radius:10px;
+    position:absolute;
+    bottom:30px;
+    left:350px;
+}
+
+.select-button:hover{
+    color:white;
+    background-color: #2699FB ;
+}
+.ninja{
+    width:140px;
+    height: 140 px;
+}
+
+/* .py-5{
+       background-color: #480048; 
+       width:100px; 
+}*/
