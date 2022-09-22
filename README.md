@@ -1,4 +1,4 @@
-# RideShare
+# BearWalk
 
 ## Business Design
 - To design a night safety service web application to enable SafeWalk escorts to get the shortest distance route to
@@ -9,7 +9,7 @@ students that requested the service and to the destinations they requested.
 - Built and deployed a night safety service web application to enable SafeWalk escorts to get the shortest distance route to
 students that requested the service and to the destinations they requested, using `Java, React, and MongoDB`.
 - Implemented a bi-directional `A* Dijkstra’s algorithm` to find the shortest path between two geocodes and a grid-based matching process
-to match drivers to riders. 
+to match students to night walkers. 
 - Developed backend functionality to match safety walkers to students by dviding the map into grids, where we store trips that pass through them. 
 A trip is matched to a student when the student's origin and destination fall into the grids that contains that trip.
 - Enabled interactive map visualization of the Berkeley campus with Google Maps API, and built frontend features with React.
@@ -25,13 +25,14 @@ A trip is matched to a student when the student's origin and destination fall in
 ![riderpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/riderpost.png)
 
  users can interact with the map (drop a location marker) to input the origin/destination.
-- After the user submits the form, the program searches through the safety walker trip database to match with drivers. The result of the search will be displayed on the next page:
+- After the user submits the form, the program searches through the safety walker trip database to match with 
+s. The result of the search will be displayed on the next page:
 > Trip Result Page
 
 
 ![tripresult](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripresult.png)
 
-- On this page, users will see all matching results displayed on the left side-bar. For each driver, the following factors are displayed:
+- On this page, users will see all matching results displayed on the left side-bar. For each night walker, the following factors are displayed:
   * Rating
   * Origin
   * Destination
@@ -44,7 +45,7 @@ A trip is matched to a student when the student's origin and destination fall in
 ![driverpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/driverpost.png)
 -Safety Walkers can interact with the map (drop a location marker) to input the locations.
 
-- After the safety walker submits the form, the program searches through the student trip request database to match with students. The safety walker receives a notification that the trip has been created. Then the program routes to the page for the newly-created trip in the safety walker's trip manager. The page contains safety walker info and all riders that have been matched. 
+- After the safety walker submits the form, the program searches through the student trip request database to match with students. The safety walker receives a notification that the trip has been created. Then the program routes to the page for the newly-created trip in the safety walker's trip manager. The page contains safety walker info and all students that have been matched. 
 
 ## Trip Manager
 > Trip Manager for Safety Walkers and Studnets
