@@ -22,15 +22,12 @@ A trip is matched to a student when the student's origin and destination fall in
 
 ## In Stduent Mode
 > Student inputs a Trip Request
-![riderpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/riderpost.png)
 
  users can interact with the map (drop a location marker) to input the origin/destination.
 - After the user submits the form, the program searches through the safety walker trip database to match with 
 s. The result of the search will be displayed on the next page:
 > Trip Result Page
 
-
-![tripresult](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripresult.png)
 
 - On this page, users will see all matching results displayed on the left side-bar. For each night walker, the following factors are displayed:
   * Rating
@@ -42,14 +39,14 @@ s. The result of the search will be displayed on the next page:
 
 ## In safety walker Mode
 > safety walker supplies a trip 
-![driverpost](https://raw.githubusercontent.com/izziegeez/RideShare/master/driverpost.png)
+
 -Safety Walkers can interact with the map (drop a location marker) to input the locations.
 
 - After the safety walker submits the form, the program searches through the student trip request database to match with students. The safety walker receives a notification that the trip has been created. Then the program routes to the page for the newly-created trip in the safety walker's trip manager. The page contains safety walker info and all students that have been matched. 
 
 ## Trip Manager
 > Trip Manager for Safety Walkers and Studnets
-![tripmanager](https://raw.githubusercontent.com/izziegeez/RideShare/master/tripmanager.png)
+
 
 -In students’ trip manager page, riders can view all trips including those matched with a safety walker and those trip requests that are still pending. For trips matched with a safety walker the student can click on “leave” to leave the trip. The safety walker will then receive a notification saying that the student has left your trip. If the safety walker’s trip was at capacity, it will now be re-added to the trip database.
 
@@ -72,12 +69,8 @@ s. The result of the search will be displayed on the next page:
 - Third Party Service
    * Google Maps API
    * AWS Cognito
-   
-## Local Development Environment
-![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/design.png)
 
-## Endpoint Design
-![endpoint](https://raw.githubusercontent.com/izziegeez/RideShare/master/endpoint.png)
+
 
 
 ## Database Design
@@ -90,6 +83,4 @@ s. The result of the search will be displayed on the next page:
 - shaded keys are primary keys
 - arrows point from a foreign key that uniquely identifies a fieled in another table **
 
-> Database Design
-    
-![design](https://raw.githubusercontent.com/izziegeez/RideShare/master/database.png)
+
