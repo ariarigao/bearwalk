@@ -71,8 +71,6 @@ s. The result of the search will be displayed on the next page:
    * AWS Cognito
 
 
-
-
 ## Database Design
 - MongoDB
    * **Trip** - store trip information, along with night walker ID, and a list of student ID's.
